@@ -1,49 +1,56 @@
-# House Price Prediction (Advanced with Validation)
+# 🏠 House Price Prediction (ML Project)
 
-## Objective
-Predict house prices using regression models and build a reliable evaluation pipeline.
+## 📌 Overview
 
-## Dataset
-Kaggle - House Prices: Advanced Regression Techniques
+Built a machine learning model to predict house prices using regression techniques. Focus was on full ML workflow: preprocessing, feature engineering, model training, and evaluation.
 
-## Approach
+---
 
-### Data Processing
-- Selected key numerical features (area, rooms, garage, quality)
-- dropped missing values 
+## 🧠 Models Used
 
-### Feature Engineering
-- Created derived features:
-  - HouseAge = CurrentYear - YearBuilt
-  - TotalSF = 1stFlrSF + 2ndFlrSF
-  - TotalRooms = TotalRooms + Bedrooms
-- Added high-impact features:
-  - OverallQual
-  - GarageCars
+* Linear Regression
+* Decision Tree Regressor
+* Random Forest Regressor (final model)
 
-### Data Splitting (Important)
-- Train set → model training  
-- Validation set → model tuning  
-- Test set → final evaluation (kept untouched)
+---
 
-## Models Used
-- Random Forest Regressor
+## ⚙️ Workflow
 
-## Results
+* Data cleaning & preprocessing
+* Feature engineering (e.g., `HouseAge`, `TotalSF`, `Qual_GrLiv`)
+* Train / Validation / Test split
+* Model training and tuning
 
-| Model | MAE |
-|------|------|
-| Validation MAE (RF) | ~19603 |
-| Test MAE (RF) | ~19262 |
+---
 
-## Key Improvements
-- Added validation set to ensure unbiased model tuning
-- Maintained separation of test data for reliable evaluation
+## 📊 Evaluation
 
-## Key Learnings
-- Feature quality impacts performance more than hyperparameter tuning
-- Random Forest captures non-linear relationships effectively
-- Proper evaluation (train/validation/test split) is critical for trustworthy models
+Metric: **Mean Absolute Error (MAE)**
 
-## Conclusion
-Built a robust regression pipeline with reliable evaluation, demonstrating strong generalization performance on unseen data.
+* Train MAE: ~183k
+* Validation MAE: ~179k
+* Test MAE: ~175k
+
+---
+
+## 🔍 Key Learnings
+
+* Overfitting control using tree constraints
+* Importance of feature engineering over model tuning
+* Strong feature dominance (`OverallQual`)
+* Skewed target distribution affects regression performance
+* Log transformation improves stability
+
+---
+
+## 🚀 Future Improvements
+
+* Try Gradient Boosting (XGBoost / LightGBM)
+* Improve extreme value prediction (luxury houses)
+* Advanced feature engineering
+
+---
+
+## 🛠 Tech Stack
+
+Python, Pandas, NumPy, Scikit-learn, Matplotlib
