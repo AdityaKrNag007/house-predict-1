@@ -29,4 +29,3 @@ Kaggle - House Prices: Advanced Regression Techniques
 - Linear models struggle with non-linear relationships
 - Random Forest captures complex patterns better
 - Feature quality has more impact than heavy tuning
-- 
