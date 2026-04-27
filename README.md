@@ -1,24 +1,32 @@
-# House Price Prediction
+# House Price Prediction (Advanced)
 
 ## Objective
-Predict house prices using machine learning.
+Predict house prices using regression models.
 
 ## Dataset
 Kaggle - House Prices: Advanced Regression Techniques
 
-## Steps
-- Selected relevant features (LotArea, YearBuilt, etc.)
+## Approach
+- Selected multiple relevant features (area, rooms, construction year, etc.)
 - Handled missing values using median
 - Split data into training and testing sets
-- Trained Decision Tree and Random Forest models
-- Evaluated using Mean Absolute Error (MAE)
+
+## Models Used
+- Linear Regression
+- Random Forest Regressor
 
 ## Results
-- Decision Tree MAE: ~29000
-- Random Forest MAE: ~22000
-- Improved to ~21800 after better features and data cleaning
+- Linear Regression MAE: ~25874
+- Random Forest MAE: ~21489
+- Tuned Random Forest MAE: ~21265
 
-## Key Learning
-- Decision Trees tend to overfit
-- Random Forest reduces overfitting and improves accuracy
-- Feature selection and data cleaning significantly impact performance
+## Key Improvements
+- Compared linear vs non-linear models
+- Tuned hyperparameters (n_estimators, max_depth)
+- Observed impact of model complexity on performance
+
+## Key Learnings
+- Linear models struggle with non-linear relationships
+- Random Forest captures complex patterns better
+- Feature quality has more impact than heavy tuning
+- 
